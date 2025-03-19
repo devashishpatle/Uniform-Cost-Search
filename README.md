@@ -1,2 +1,2 @@
-# Uniform-Cost-Search
-This is a program of uniform cost search uisng python
+# Uniform_Cost_Search
+This is a Program of Uniform Cost Search Using Python
