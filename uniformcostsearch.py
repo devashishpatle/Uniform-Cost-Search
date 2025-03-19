@@ -6,7 +6,6 @@ def uniform_cost_search(graph, start, goal):
     if start == goal:
         return path, path_cost,visited
     path.append(start)
-
     
     openlist=[(path_cost,path)]
     while len(openlist)>0:
@@ -23,6 +22,7 @@ def uniform_cost_search(graph, start, goal):
         
         #expand children of current node
         neighbours=graph[currnode]
+        
         #neighbours.sort() # if neighbours are to be entered in a sorted way
         print('The neighbours are',neighbours)
         for n in neighbours:
@@ -46,9 +46,11 @@ def uniform_cost_search(graph, start, goal):
     return path, n_path_cost, visited
     
 # defining graph and calling uniform cost function
-graph3={'a':[(6,'b'),(3,'c')],'b':[(2,'d'),(1,'c')],'c':[(4,'b'),(8,'d'),(2,'e')],'d':[(9,'e')],'e':[(7,'d')]}
+#graph3={'a':[(6,'b'),(3,'c')],'b':[(2,'d'),(1,'c')],'c':[(4,'b'),(8,'d'),(2,'e')],'d':[(9,'e')],'e':[(7,'d')]}
+graph3={'s':[(1,'a'),(12,'g')],'a':[(3,'b'),(1,'c')],'c':[(1,'d')],'d':[(3,'g')],'b':[(3,'d')]}
 
-p,c,v=uniform_cost_search(graph3, 'a','d')
+#p,c,v=uniform_cost_search(graph3, 'a','d')
+p,c,v=uniform_cost_search(graph3, 's','g')
 print('From main')
 print('The path is:',p)
 print('The path cost is',c)
